@@ -1,1 +1,5 @@
 #!/usr/bin/env bash
+# Script that listens on port 98 on localhost
+
+# Using netcat command with the -l flag to activate listen mode on port 98
+nc -l 98

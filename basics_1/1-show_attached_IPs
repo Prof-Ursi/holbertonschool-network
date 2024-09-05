@@ -1,1 +1,5 @@
 #!/usr/bin/env bash
+# Script that displays all active IPv4 IPs on the machine it’s executed on.
+
+# Use the `ifconfig` to fetch and display current network config information, and pipe it through `grep` to filter the info and keep only the ip adress after "inet".
+ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
